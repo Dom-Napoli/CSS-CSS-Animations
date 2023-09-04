@@ -7,14 +7,12 @@
   width: 20%;
   margin: auto;
   display: inline-block;
-  opacity: 0.5;
   transition: 5s;
 }
 
-.transform-demo>div: hover {
-  transform: translateX(150);
-  }
-
+.transform-demo > div:hover{
+  transform: translateX(150px);
+} 
 
 /****************************************
 * Transition
@@ -43,14 +41,39 @@ transform: rotate(360deg) scale(2.0);
   width: 500px;
   margin: auto;
   background-color: palegreen;
-  animation: side-bar 10s;
-  
+  animation: sale-bar 10s;
 }
 
 @keyframes sale-bar {
-  0% { background-color: lightgreen; width: 450px }
-  75% { background-color: #FF033E; width: 125x }
-  100% { background-color: crimson; width: 10px }
+  0% { background-color: #898ba7; width: 450px }
+  15% { background-color: rgb(241, 235, 235); width: 600px;}
+  50% { background-color: #1f0c8f; width: 300px }
+  65% { background-color: #ffe600; height: 200px; width: 250px;}
+  100% { background-color: rgb(255, 0, 51); width: 150px }
 }
 
+section {
+  background: #ffdb10;
+  height: 400px;
+  width: 400px;
+  margin: 30% auto;
+}
 
+.inner-div {
+  background: blue;
+  width: 200px;
+  height: 200px;
+  animation: dom-moves 8s infinite;
+}
+
+@keyframes dom-moves{
+  0% {transform: translateX(0) translateY(0); background: whitesmoke;}
+  10% {transform: translateX(0) translateY(100%); background: #315e70;}
+  30% {transform: translateX(100%) translateY(100%); background: #38055a; height:225px;}
+  40% {transform: translateX(100%) translateY(0); background: #f80303; height:225px;}
+
+  60% {transform: translateX(0) translateY(0); background: whitesmoke;}
+  70% {transform: translateX(100%) translateY(0); background: #315e70;}
+  80% {transform: translateX(100%) translateY(100%); background: #38055a; height:225px;}
+  90% {transform: translateX(0) translateY(100%); background: #f80303; height:225px;}
+}
